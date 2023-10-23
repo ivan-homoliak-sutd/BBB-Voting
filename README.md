@@ -30,11 +30,7 @@ Particular folders contain different implementations, as mentioned - in the eval
 - **ECC_FT**: improved ECDSA implementation using Jacobi coordinates and modular inverse precomputation; additionally offerering fault tolerance
 
 
-All folders are truffle projects and can be run after installing all dependencies by:
-
-```
-$ truffle test
-```
+All folders are truffle projects and can be run after installing all dependencies.
 
 **Cite as**
 ```
