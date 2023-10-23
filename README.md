@@ -22,6 +22,19 @@ In the ECC, we used a standardized Secp256k1 curve from existing libraries.
 In the case of IA, we used a dedicated library for operations with big numbers since EVM natively supports only 256-bit long words, which does not provide sufficient security level with respect to the DLP for integers modulo $p$ (Since this DLP was already computed for 795-bit long safe prime in 2019, only values higher than 795-bit are considered secure enough.)
 We consider 1024 bits the minimal secure (library-supported) length of numbers in IA.
 
+**Structure**  
+Particular folders contain different implementations, as mentioned - in the evaluation section of the paper:
+
+- **IA-256**:   IA implementation with native size of modulus (=256bits)   
+- **IA_n_bits** IA implementation with arbitrary size of modulus (can be configured in ./library/config)
+- **ECC_FT**: improved ECDSA implementation using Jacobi coordinates and modular inverse precomputation; additionally offerering fault tolerance
+
+
+All folders are truffle projects and can be run after installing all dependencies by:
+
+```
+$ truffle test
+```
 
 **Cite as**
 ```
